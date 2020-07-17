@@ -19,6 +19,7 @@ export interface TestOptions {
   showVulnPaths: ShowVulnPaths;
   failOn?: FailOn;
   reachableVulns?: boolean;
+  callGraphBuilderTimeout?: number;
   yarnWorkspaces?: boolean;
 }
 
@@ -91,6 +92,7 @@ export interface MonitorOptions {
   // Used with the Docker plugin only. Allows application scanning.
   'app-vulns'?: boolean;
   reachableVulns?: boolean;
+  callGraphBuilderTimeout?: number;
   yarnWorkspaces?: boolean;
 }
 
@@ -160,7 +162,8 @@ export type SupportedUserReachableFacingCliArgs =
   | 'yarn-workspaces'
   | 'detection-depth'
   | 'project-name'
-  | 'reachable-vulns';
+  | 'reachable-vulns'
+  | 'call-graph-builder-timeout';
 
 export type SupportedCliCommands =
   | 'protect'

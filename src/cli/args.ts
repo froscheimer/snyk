@@ -193,6 +193,7 @@ export function args(rawArgv: string[]): Args {
     'yarn-workspaces',
     'detection-depth',
     'reachable-vulns',
+    'call-graph-builder-timeout',
   ];
   for (const dashedArg of argumentsToTransform) {
     if (argv[dashedArg]) {
